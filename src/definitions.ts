@@ -43,6 +43,14 @@ export interface WidgetsBridgePluginPlugin {
    * @returns {Promise<DataResults<boolean>>} Promise represents the operation results
    */
   reloadTimelines(options: TimelinesOptions): Promise<DataResults<boolean>>;
+  
+  /**
+   * Get current widget configurations
+   *
+   * @since 0.0.1
+   * @returns {Promise<DataResults<any>>} Promise represents the operation results
+   */
+  getCurrentConfigurations(): Promise<DataResults<any>>;
 }
 
 export interface UserDefaultsOptions{
