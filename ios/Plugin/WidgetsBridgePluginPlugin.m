@@ -9,4 +9,5 @@ CAP_PLUGIN(WidgetsBridgePluginPlugin, "WidgetsBridgePlugin",
            CAP_PLUGIN_METHOD(removeItem, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(reloadAllTimelines, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(reloadTimelines, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(getCurrentConfigurations, CAPPluginReturnPromise);
 )

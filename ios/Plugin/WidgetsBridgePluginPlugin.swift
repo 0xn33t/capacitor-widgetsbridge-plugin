@@ -95,4 +95,27 @@ public class WidgetsBridgePluginPlugin: CAPPlugin {
         }
     }
     
+    @objc func getCurrentConfigurations(_ call: CAPPluginCall) {
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.getCurrentConfigurations { result in
+                guard case .success(let widgets) = result else {
+                    call.reject("Could not get current configurations")
+                    return
+                }
+                
+                call.resolve(["results": widgets.map { widget in
+                    [
+                        "family": widget.family.description,
+                        "kind": widget.kind,
+                        "configuration": [
+                            "description": widget.configuration?.description
+                        ]
+                    ]
+                }])
+            }
+        } else {
+            call.unavailable("Not available in iOS 13 or earlier.")
+        }
+    }
+    
 }
