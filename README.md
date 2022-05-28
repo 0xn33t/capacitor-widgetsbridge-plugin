@@ -22,6 +22,7 @@ npx cap sync
 * [`removeItem(...)`](#removeitem)
 * [`reloadAllTimelines()`](#reloadalltimelines)
 * [`reloadTimelines(...)`](#reloadtimelines)
+* [`getCurrentConfigurations()`](#getcurrentconfigurations)
 * [Interfaces](#interfaces)
 
 </docgen-index>
@@ -112,6 +113,21 @@ Reloads the timelines for all widgets of a particular kind
 | Param         | Type                                                          |
 | ------------- | ------------------------------------------------------------- |
 | **`options`** | <code><a href="#timelinesoptions">TimelinesOptions</a></code> |
+
+**Returns:** <code>any</code>
+
+**Since:** 0.0.1
+
+--------------------
+
+
+### getCurrentConfigurations()
+
+```typescript
+getCurrentConfigurations() => any
+```
+
+Get current widget configurations
 
 **Returns:** <code>any</code>
 
