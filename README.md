@@ -33,7 +33,7 @@ npx cap sync
 ### getItem(...)
 
 ```typescript
-getItem(options: UserDefaultsOptions) => any
+getItem(options: UserDefaultsOptions) => Promise<DataResults<any>>
 ```
 
 Return the value from user’s defaults database associated with the specified key
@@ -42,9 +42,7 @@ Return the value from user’s defaults database associated with the specified k
 | ------------- | ------------------------------------------------------------------- |
 | **`options`** | <code><a href="#userdefaultsoptions">UserDefaultsOptions</a></code> |
 
-**Returns:** <code>any</code>
-
-**Since:** 0.0.1
+**Returns:** <code>Promise&lt;<a href="#dataresults">DataResults</a>&lt;any&gt;&gt;</code>
 
 --------------------
 
@@ -52,7 +50,7 @@ Return the value from user’s defaults database associated with the specified k
 ### setItem(...)
 
 ```typescript
-setItem(options: UserDefaultsOptions) => any
+setItem(options: UserDefaultsOptions) => Promise<DataResults<boolean>>
 ```
 
 Set the value to user’s defaults database associated with the specified key
@@ -61,9 +59,7 @@ Set the value to user’s defaults database associated with the specified key
 | ------------- | ------------------------------------------------------------------- |
 | **`options`** | <code><a href="#userdefaultsoptions">UserDefaultsOptions</a></code> |
 
-**Returns:** <code>any</code>
-
-**Since:** 0.0.1
+**Returns:** <code>Promise&lt;<a href="#dataresults">DataResults</a>&lt;boolean&gt;&gt;</code>
 
 --------------------
 
@@ -71,7 +67,7 @@ Set the value to user’s defaults database associated with the specified key
 ### removeItem(...)
 
 ```typescript
-removeItem(options: UserDefaultsOptions) => any
+removeItem(options: UserDefaultsOptions) => Promise<DataResults<boolean>>
 ```
 
 Remove the value from user’s defaults database associated with the specified key
@@ -80,9 +76,7 @@ Remove the value from user’s defaults database associated with the specified k
 | ------------- | ------------------------------------------------------------------- |
 | **`options`** | <code><a href="#userdefaultsoptions">UserDefaultsOptions</a></code> |
 
-**Returns:** <code>any</code>
-
-**Since:** 0.0.1
+**Returns:** <code>Promise&lt;<a href="#dataresults">DataResults</a>&lt;boolean&gt;&gt;</code>
 
 --------------------
 
@@ -90,14 +84,12 @@ Remove the value from user’s defaults database associated with the specified k
 ### reloadAllTimelines()
 
 ```typescript
-reloadAllTimelines() => any
+reloadAllTimelines() => Promise<DataResults<boolean>>
 ```
 
 Reloads the timelines for all configured widgets belonging to the containing app
 
-**Returns:** <code>any</code>
-
-**Since:** 0.0.1
+**Returns:** <code>Promise&lt;<a href="#dataresults">DataResults</a>&lt;boolean&gt;&gt;</code>
 
 --------------------
 
@@ -105,7 +97,7 @@ Reloads the timelines for all configured widgets belonging to the containing app
 ### reloadTimelines(...)
 
 ```typescript
-reloadTimelines(options: TimelinesOptions) => any
+reloadTimelines(options: TimelinesOptions) => Promise<DataResults<boolean>>
 ```
 
 Reloads the timelines for all widgets of a particular kind
@@ -114,9 +106,7 @@ Reloads the timelines for all widgets of a particular kind
 | ------------- | ------------------------------------------------------------- |
 | **`options`** | <code><a href="#timelinesoptions">TimelinesOptions</a></code> |
 
-**Returns:** <code>any</code>
-
-**Since:** 0.0.1
+**Returns:** <code>Promise&lt;<a href="#dataresults">DataResults</a>&lt;boolean&gt;&gt;</code>
 
 --------------------
 
@@ -124,14 +114,12 @@ Reloads the timelines for all widgets of a particular kind
 ### getCurrentConfigurations()
 
 ```typescript
-getCurrentConfigurations() => any
+getCurrentConfigurations() => Promise<DataResults<any>>
 ```
 
 Get current widget configurations
 
-**Returns:** <code>any</code>
-
-**Since:** 0.0.1
+**Returns:** <code>Promise&lt;<a href="#dataresults">DataResults</a>&lt;any&gt;&gt;</code>
 
 --------------------
 
@@ -139,26 +127,26 @@ Get current widget configurations
 ### Interfaces
 
 
-#### UserDefaultsOptions
-
-| Prop        | Type                | Description                                                           | Since |
-| ----------- | ------------------- | --------------------------------------------------------------------- | ----- |
-| **`key`**   | <code>string</code> | The key whose value to retrieve from storage.                         | 0.0.1 |
-| **`group`** | <code>string</code> | User defaults database name which holds and organizes key/value pairs | 0.0.1 |
-| **`value`** | <code>string</code> | The value to set in storage with the associated key                   | 0.0.1 |
-
-
 #### DataResults
 
-| Prop          | Type           | Description                             | Since |
-| ------------- | -------------- | --------------------------------------- | ----- |
-| **`results`** | <code>T</code> | Holds response results from native code | 0.0.1 |
+| Prop          | Type           | Description                             |
+| ------------- | -------------- | --------------------------------------- |
+| **`results`** | <code>T</code> | Holds response results from native code |
+
+
+#### UserDefaultsOptions
+
+| Prop        | Type                | Description                                                           |
+| ----------- | ------------------- | --------------------------------------------------------------------- |
+| **`key`**   | <code>string</code> | The key whose value to retrieve from storage.                         |
+| **`group`** | <code>string</code> | User defaults database name which holds and organizes key/value pairs |
+| **`value`** | <code>string</code> | The value to set in storage with the associated key                   |
 
 
 #### TimelinesOptions
 
-| Prop         | Type                | Description                                                                                                    | Since |
-| ------------ | ------------------- | -------------------------------------------------------------------------------------------------------------- | ----- |
-| **`ofKind`** | <code>string</code> | A string that identifies the widget and matches the value you used when you created the widget’s configuration | 0.0.1 |
+| Prop         | Type                | Description                                                                                                    |
+| ------------ | ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **`ofKind`** | <code>string</code> | A string that identifies the widget and matches the value you used when you created the widget’s configuration |
 
 </docgen-api>
