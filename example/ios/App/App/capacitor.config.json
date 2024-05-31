@@ -2,5 +2,9 @@
 	"appId": "com.0xn33t.ioswidgetsexample",
 	"appName": "IOSWidgetsExample",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"packageClassList": [
+		"WidgetsBridgePluginPlugin",
+		"WidgetsBridgePluginPlugin"
+	]
 }

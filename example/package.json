@@ -33,12 +33,13 @@
     "@angular-eslint/builder": "^16.0.0",
     "@angular-eslint/eslint-plugin": "^16.0.0",
     "@angular-eslint/eslint-plugin-template": "^16.0.0",
-    "@angular-eslint/template-parser": "^16.0.0",
     "@angular-eslint/schematics": "^16.0.0",
+    "@angular-eslint/template-parser": "^16.0.0",
     "@angular/cli": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/compiler-cli": "^16.0.0",
     "@angular/language-service": "^16.0.0",
+    "@capacitor/cli": "^6.0.0",
     "@ionic/angular-toolkit": "^9.0.0",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^12.11.1",
@@ -59,6 +60,5 @@
     "ts-node": "^8.3.0",
     "typescript": "~5.0.2"
   },
-  
   "description": "An Ionic project"
 }
