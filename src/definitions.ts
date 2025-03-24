@@ -1,9 +1,9 @@
-export interface WidgetsBridgePluginPlugin {
+export interface WidgetsBridgePlugin {
 
   /**
    * Return the value from user’s defaults database associated with the specified key
-   * 
-   * @param {UserDefaultsOptions} options 
+   *
+   * @param {UserDefaultsOptions} options
    * @since 0.0.1
    * @returns {Promise<DataResults<any>>} Promise represents the value
    */
@@ -11,8 +11,8 @@ export interface WidgetsBridgePluginPlugin {
 
   /**
    * Set the value to user’s defaults database associated with the specified key
-   * 
-   * @param {UserDefaultsOptions} options 
+   *
+   * @param {UserDefaultsOptions} options
    * @since 0.0.1
    * @returns {Promise<DataResults<boolean>>} Promise represents the operation results
    */
@@ -20,8 +20,8 @@ export interface WidgetsBridgePluginPlugin {
 
   /**
    * Remove the value from user’s defaults database associated with the specified key
-   * 
-   * @param {UserDefaultsOptions} options 
+   *
+   * @param {UserDefaultsOptions} options
    * @since 0.0.1
    * @returns {Promise<DataResults<boolean>>} Promise represents the operation results
    */
@@ -29,7 +29,7 @@ export interface WidgetsBridgePluginPlugin {
 
   /**
    * Reloads the timelines for all configured widgets belonging to the containing app
-   * 
+   *
    * @since 0.0.1
    * @returns {Promise<DataResults<boolean>>} Promise represents the operation results
    */
@@ -37,13 +37,13 @@ export interface WidgetsBridgePluginPlugin {
 
   /**
    * Reloads the timelines for all widgets of a particular kind
-   * 
-   * @param {TimelinesOptions} options 
+   *
+   * @param {TimelinesOptions} options
    * @since 0.0.1
    * @returns {Promise<DataResults<boolean>>} Promise represents the operation results
    */
   reloadTimelines(options: TimelinesOptions): Promise<DataResults<boolean>>;
-  
+
   /**
    * Get current widget configurations
    *

@@ -4,7 +4,7 @@
 	"webDir": "www",
 	"bundledWebRuntime": false,
 	"packageClassList": [
-		"WidgetsBridgePluginPlugin",
-		"WidgetsBridgePluginPlugin"
+		"WidgetsBridgePlugin",
+		"WidgetsBridgePlugin"
 	]
 }
